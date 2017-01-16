@@ -28,7 +28,7 @@ public class Utilisateur {
 		this.password = password;
 		this.statut = statut;
 	}
-
+//
 	public Utilisateur ()
 	{
 		creerUser();
