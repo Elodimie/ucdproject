@@ -5,7 +5,7 @@ public class Main {
 	
 	public static void main (String[]args)
 	{
-			Connect BDD2 = new Connect();
+			BDDConnectSingleton BDD2 = new BDDConnectSingleton();
 			Modele notremodele = new Modele();
 			Controleur controleur = new Controleur (notremodele);
 			Vue notrevue = new Vue (controleur);
