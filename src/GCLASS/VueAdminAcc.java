@@ -53,7 +53,7 @@ public class VueAdminAcc extends JFrame {
 		//nomuser.setBackground(Color.LIGHT_GRAY);
 		//nomuser.setOpaque(true);
 		//nomuser.setSize(new Dimension(400, 100));
-		
+		//
 		
 		container.add(nomuser);
 		

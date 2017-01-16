@@ -73,7 +73,7 @@ public class VueAdminPromos extends JFrame {
 			
 			container.add(fonctions, BorderLayout.EAST);
 			
-			setVisible(true);
+			setVisible(true);//
 			
 		}
 }

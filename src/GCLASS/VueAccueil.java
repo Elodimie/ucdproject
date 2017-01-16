@@ -51,6 +51,7 @@ public class VueAccueil extends JFrame {
 		accueil.add(bienv);
 		//bienvenue.setBackground(Color.black);
 		//bienvenue.setOpaque(true);
+		//
 		
 		login1.setPreferredSize(new Dimension(150, 30));
 		login1.setBackground(Color.white);
