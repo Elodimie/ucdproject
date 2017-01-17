@@ -4,5 +4,5 @@ public enum TypeEquipt {
 		  Mobilier,
 		  Informatique,
 		  Electromenager,
-		  RÃ©seau;	
+		  Réseau;	
 		}

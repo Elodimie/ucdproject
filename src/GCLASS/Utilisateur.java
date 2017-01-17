@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Utilisateur {
 	
 	
-	/***************************** ATTRIBUTS DE MA SUPER CLASSE ***************************************/
+	/***************************** ATTRIBUTS DE MA CLASSE ***************************************/
 
 	protected String nom;
 	protected String prenom;
@@ -28,7 +28,7 @@ public class Utilisateur {
 		this.password = password;
 		this.statut = statut;
 	}
-//
+
 	public Utilisateur ()
 	{
 		creerUser();
@@ -162,6 +162,5 @@ public class Utilisateur {
 	}
 	
 
-	
 	
 }

@@ -11,8 +11,9 @@ public class Main {
 			Vue notrevue = new Vue (controleur);
 			notremodele.addObserver(notrevue);
 			System.out.println("ok!");
-			Responsable a = new Responsable();
-			System.out.println(a);
+		
+			Utilisateur a = new Utilisateur();
+			a.verifUser();
 			
 			
 	}

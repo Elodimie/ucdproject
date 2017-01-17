@@ -3,6 +3,9 @@ package GCLASS;
 import java.util.Scanner;
 
 public class Resa {
+	
+	/***************************** ATTRIBUTS DE MA CLASSE ***************************************/
+	
 	private String salle;
 	private String cours;
 	private String promo;
@@ -13,17 +16,23 @@ public class Resa {
 	private int idpromo;
 	private int idprof;
 	
-	public Resa( String salle, String cours, String promo, String prof, MaDate date) {
+	/******************************* CONSTRUCTEURS ************************************************/
+
+	public Resa( String salle, String cours, String promo, String prof) {
 		super();
 		this.salle = salle;
 		this.cours = cours;
 		this.promo = promo;
 		this.prof = prof;
-		this.date = date;
 	}
+	
 	public Resa() {
 		ajoutResa();
 	}
+	
+	/******************************** GETTERS AND SETTERS *******************************************/
+
+	
 	public String getProf() {
 		return prof;
 	}
@@ -69,7 +78,10 @@ public class Resa {
 	public int getIdprof() {
 		return idprof;
 	}	
-// m√©thodes 
+
+	/**************** METHODE DE CREATION D UNE RESERVATION POUR LE RESPONSABLE ****************/
+
+	
 	public void ajoutResa() {
 		Scanner sc= new Scanner(System.in);
 	
@@ -81,30 +93,37 @@ public class Resa {
 		promo=sc.nextLine();
 		System.out.println("Saisir le nom du formateur  :");
 		prof=sc.nextLine();
-		System.out.println("Saisir le jour de la r√©servation");
-		int jour=sc.nextInt();
-		System.out.println("Saisir le mois de la r√©servation");
-		int mois=sc.nextInt();
-		System.out.println("Saisir l'ann√©e de la r√©servation");
-		int annee=sc.nextInt();
-		date=new MaDate(jour, mois, annee);
+		System.out.println("Saisir la date de la rÈservation");
+		MaDate date= new MaDate();
 	}	
-	public void modifResa (String nvsalle, String nvcours, String nvpromo, String nvformateur, MaDate nvdate){ 	
+	
+	public String toString() {
+		String texte = " Le " +date + ", le formateur " + prof + 
+				" donnera un cours de " + cours + " aux ÈlËves de la promo " + promo + " dans la salle " + salle + ".";
+		return texte;
+	}
+	
+	
+	
+	/**************** METHODE DE MODIFICATION D UNE RESERVATION  POUR LE RESPONSABLE ****************/
+
+	public void modifResa (String nvsalle, String nvcours, String nvpromo, String nvformateur){ 	
 		modifPromoR(nvpromo);
 		modifSalleR(nvsalle);
 		modifCoursR(nvcours);
 		modifProfR(nvformateur);
-		modifDate(nvdate);
+	
 	}	
+	
 	public void modifResa() {
 	}	
 	
 	public void modifSalleR() {
 		String ancien=getSalle();
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Saisir la nouvelle  salle qui sera affect√©e :");
+		System.out.println("Saisir la nouvelle  salle qui sera affectÈe :");
 		salle=sc.nextLine();
-		System.out.println("La salle est pass√©e de "+ancien+" √† "+salle);	
+		System.out.println("La salle est passÈe de "+ancien+" ‡† "+salle);	
 	}
 	public void modifSalleR(String nouveau) {
 		setSalle(nouveau);
@@ -113,9 +132,9 @@ public class Resa {
 	public void modifCoursR(){	
 		String ancien=getCours();
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Saisir le nouvveau cours qui sera affect√© :");
+		System.out.println("Saisir le nouveau cours qui sera affectÈ :");
 		cours=sc.nextLine();
-		System.out.println("Le cours est pass√© de "+ancien+" √† "+salle);
+		System.out.println("Le cours est passÈ de "+ancien+" ‡† "+salle);
 	}	
 	public void modifCoursR(String nouveau) {
 		setCours(nouveau);	
@@ -124,9 +143,9 @@ public class Resa {
 	public void modifPromoR() {
 		String ancien=getPromo();
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Saisir la nouvelle promotion qui sera affect√©e :");
+		System.out.println("Saisir la nouvelle promotion qui sera affectÈe :");
 		promo=sc.nextLine();
-		System.out.println("La promotion est pass√©e de "+ancien+" √† "+promo);	
+		System.out.println("La promotion est passÈe de "+ancien+" ‡† "+promo);	
 	}
 	public void modifPromoR(String nouveau) {
 		setPromo(nouveau);
@@ -135,9 +154,9 @@ public class Resa {
 	public void modifProfR() {
 		String ancien=getPromo();
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Saisir le nom du nouveau formateur qui sera affect√©e :");
+		System.out.println("Saisir le nom du nouveau formateur qui sera affectÈe :");
 		prof=sc.nextLine();
-		System.out.println("Le formateur est pass√© de "+ancien+" √† "+prof);	
+		System.out.println("Le formateur est passÈ de "+ancien+" ‡ "+prof);	
 	}
 	public void modifProfR(String nouveau) {
 		setProf(nouveau);
@@ -146,21 +165,19 @@ public class Resa {
 	public void modifDate() {
 		MaDate ancien=getDate();
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Saisir la nouvelle date de la r√©servation");
+		System.out.println("Saisir la nouvelle date de la rÈservation");
 		System.out.println("- le jour : ");
 		int jour=sc.nextInt();
 		System.out.println("- le mois : ");
 		int mois=sc.nextInt();
-		System.out.println(" - l'ann√©e :");
+		System.out.println(" - l'annÈe :");
 		int annee=sc.nextInt();
 		date=new MaDate(jour, mois, annee);
-		System.out.println("La date est pass√© de "+ancien+" √† "+date);			
+		System.out.println("La date est passÈe de "+ancien+" ‡ "+date);			
 	}
 	public void modifDate(MaDate nouveau) {
 		setDate(nouveau);
 	}
 	
-	public void suppResa() {	
-	}	
 	
 }
