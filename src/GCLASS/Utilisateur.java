@@ -160,6 +160,11 @@ public class Utilisateur {
 		modifierMP();
 		modifierStatut();
 	}
+
+	public void verifUser() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 	
