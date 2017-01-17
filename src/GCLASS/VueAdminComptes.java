@@ -20,7 +20,7 @@ import javax.swing.JRadioButtonMenuItem;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class VueAdminComptes extends JFrame {
-//
+
 		protected JPanel container = new JPanel();
 		protected JMenu menu = new JMenu("Menu");
 		protected JMenu promos = new JMenu("Promos >");
